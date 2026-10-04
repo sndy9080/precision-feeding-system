@@ -1,0 +1,53 @@
+name: pakan_ternak_iot
+description: "Sistem Otomasi Pakan Ternak Berbasis ESP32 & Firebase"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ===== FIREBASE (Core & RTDB & Auth) =====
+  firebase_core: ^2.24.0
+  firebase_database: ^10.2.0
+  firebase_auth: ^4.16.0
+
+  # ===== STATE MANAGEMENT (Riverpod) =====
+  flutter_riverpod: ^2.4.0
+
+  # ===== BACKGROUND TASK (Pengganti Alarm Manager) =====
+  workmanager: ^0.9.0
+
+  # ===== UTILITIES =====
+  shared_preferences: ^2.2.2
+  intl: ^0.20.2
+  logger: ^2.0.0
+  equatable: ^2.0.5
+  fl_chart: ^1.2.0
+  flutter_local_notifications: ^20.1.0
+  crypto: ^3.0.7
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/logo.png   # <--- agar bisa dipanggil di dalam aplikasi
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/logo.png"
+
+  adaptive_icon_background: "#FFFFFF" # Warna latar belakang HEX (Misal: Putih)
+  adaptive_icon_foreground: "assets/icon/logo.png" # Gambar logo yang sudah di-crop ketat
+  # adaptive_icon_background: "#FFFFFF" (Opsional: background putih)
+

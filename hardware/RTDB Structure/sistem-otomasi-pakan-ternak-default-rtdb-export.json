@@ -1,0 +1,39 @@
+{
+  "users": {
+    "<firebase_uid>": {
+      "devices": {
+        "ESP32_A1B2C3D4E5F6": {
+          "nama": "Hopper Sapi A"
+        }
+      }
+    }
+  },
+  "devices": {
+    "ESP32_A1B2C3D4E5F6": {
+      "meta": {
+        "device_id": "ESP32_A1B2C3D4E5F6",
+        "claim_uid": "",
+        "nama": "",
+        "status": "online"
+      },
+      "Kalibrasi": {"batas_pakan_minimum": 32},
+      "KategoriPakan": {
+        "rumput_cacah": {
+          "nama": "Rumput Cacah",
+          "batas_kelembaban": 2243,
+          "kering": {"durasi_distribusi_ms": 4600, "gram_min": 500, "gram_max": 1000, "pwm_min": 95, "pwm_max": 170, "pwm_motor2": 240},
+          "basah": {"durasi_distribusi_ms": 4600, "gram_min": 500, "gram_max": 1000, "pwm_min": 90, "pwm_max": 150, "pwm_motor2": 220}
+        }
+      },
+      "Konfigurasi": {"mode": "Auto", "profil_manual": "Kering", "profil_pakan_aktif": "rumput_cacah", "timezone_offset": 25200},
+      "Jadwal": {},
+      "Monitoring": {"aktivitas_pir": "(Standby)", "jarak_cm": 100, "kelembaban": 0},
+      "Perintah": {
+        "pakan": {"aktif": false, "keterangan": "", "respon": "", "target_gram": 500, "tipe": ""},
+        "sensor": {"minta_update": false, "respon": ""},
+        "test_aktuator": {"aktif": false, "durasi_ms": 0, "hasil_waktu_ms": 0, "pwm_m1": 0, "pwm_m2": 240, "respon": "", "tipe": ""}
+      },
+      "Riwayat": {}
+    }
+  }
+}

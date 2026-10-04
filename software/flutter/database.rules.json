@@ -1,0 +1,99 @@
+{
+  "rules": {
+
+    "users": {
+      "$uid": {
+        ".read":  "auth != null && auth.uid == $uid",
+        ".write": "auth != null && auth.uid == $uid"
+      }
+    },
+
+    "devices": {
+      "$deviceId": {
+
+        ".read": "auth != null && (root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid || root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid)",
+
+        "meta": {
+          ".read": "auth != null",
+
+          "factory_proof": {
+            ".write": "auth != null && (!root.child('devices').child($deviceId).child('meta/device_uid').exists() || root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid)"
+          },
+
+          "device_uid": {
+            ".write": "auth != null && !data.exists()"
+          },
+
+          "pairing_code": {
+            ".write": "auth != null && root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid"
+          },
+
+          "status": {
+            ".write": "auth != null && root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid"
+          },
+
+          "last_seen_epoch": {
+            ".write": "auth != null && root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid"
+          },
+
+          "ip_address": {
+            ".write": "auth != null && root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid"
+          },
+
+          "ota_mode": {
+            ".write": "auth != null && root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid"
+          },
+
+          "nama": {
+            ".write": "auth != null && (root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid || root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid)"
+          },
+
+          "claim_uid": {
+            ".write": "auth != null && ((!data.exists() && root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid) || root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid)"
+          }
+        },
+
+        "pairing_requests": {
+          "$requestUid": {
+            ".read":  "auth != null && root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid",
+            ".write": "auth != null && (auth.uid == $requestUid || root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid)"
+          }
+        },
+
+        "Monitoring": {
+          ".write": "auth != null && root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid"
+        },
+
+        "Riwayat": {
+          ".write": "auth != null && root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid",
+          ".indexOn": ["tanggal", "waktu"]
+        },
+
+        "Perintah": {
+          ".read":  "auth != null && (root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid || root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid)",
+          ".write": "auth != null && (root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid || root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid)"
+        },
+
+        "Kalibrasi": {
+          ".read":  "auth != null && (root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid || root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid)",
+          ".write": "auth != null && root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid"
+        },
+
+        "Konfigurasi": {
+          ".read":  "auth != null && (root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid || root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid)",
+          ".write": "auth != null && (root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid || root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid)"
+        },
+
+        "Jadwal": {
+          ".read":  "auth != null && (root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid || root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid)",
+          ".write": "auth != null && (root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid || root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid)"
+        },
+
+        "KategoriPakan": {
+          ".read":  "auth != null && (root.child('devices').child($deviceId).child('meta/device_uid').val() == auth.uid || root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid)",
+          ".write": "auth != null && root.child('devices').child($deviceId).child('meta/claim_uid').val() == auth.uid"
+        }
+      }
+    }
+  }
+}

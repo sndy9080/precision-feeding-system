@@ -1,0 +1,26 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "sistem-otomasi-pakan-ternak",
+          "appId": "1:1013380293809:android:9dcf28e738c4d038d6ae90",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "sistem-otomasi-pakan-ternak",
+          "configurations": {
+            "android": "1:1013380293809:android:9dcf28e738c4d038d6ae90",
+            "ios": "1:1013380293809:ios:8272c3066dd8fa28d6ae90",
+            "macos": "1:1013380293809:ios:8272c3066dd8fa28d6ae90",
+            "web": "1:1013380293809:web:8664dd5e980c0ecad6ae90",
+            "windows": "1:1013380293809:web:b20f2287a4653f95d6ae90"
+          }
+        }
+      }
+    }
+  },
+  "database": {"rules": "database.rules.json"}
+}

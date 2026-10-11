@@ -331,7 +331,7 @@ Key outcomes include:
 
 ## 📈 (Business Value)
 
-The prototype successfully demonstrates that a low-cost IoT architecture can revolutionize small-scale farming. By shifting from manual estimation to precision automation, the system provides:
+By shifting from manual estimation to precision automation, the system provides:
 
 * **Cost Efficiency:** Significantly reduces feed waste through high-precision dosing compared to manual methods.
 * **Labor Optimization:** Frees up farmers' time by automating daily feeding schedules.

@@ -334,11 +334,11 @@ Key outcomes include:
 By shifting from manual estimation to precision automation, the system provides:
 
 * **Cost Efficiency**
-* Significantly reduces feed waste through high-precision dosing compared to manual methods.
+Significantly reduces feed waste through high-precision dosing compared to manual methods.
 * **Labor Optimization**
-* Frees up farmers' time by automating daily feeding schedules.
+Frees up farmers' time by automating daily feeding schedules.
 * **Operational Reliability**
-* Ensures consistent operation without mechanical clogging, supported by a smart fail-safe mechanism to protect hardware longevity.
+Ensures consistent operation without mechanical clogging, supported by a smart fail-safe mechanism to protect hardware longevity.
 
 ## ⚠️ Limitations & Future Improvements
 

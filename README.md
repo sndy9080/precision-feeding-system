@@ -18,8 +18,8 @@ The physical feeding mechanism uses a **Double Stage Conveyor with cleats**, dri
 
 The system integrates three primary sensing functions:
 
-* **HC-SR04 Ultrasonic Sensor** — monitors the remaining feed stock inside the hopper.
-* **Capacitive Moisture Sensor** — classifies feed conditions as wet or dry for actuator profiling.
+* **HC-SR04 Ultrasonic Sensor** - monitors the remaining feed stock inside the hopper.
+* **Capacitive Moisture Sensor** - classifies feed conditions as wet or dry for actuator profiling.
 * **PIR Sensor** — detects livestock activity around the feeding area after feed delivery.
 
 The ESP32 processes sensor data, synchronizes time through **Network Time Protocol (NTP)**, executes scheduled or on-demand feeding commands, and communicates with **Firebase Realtime Database (RTDB)**.
